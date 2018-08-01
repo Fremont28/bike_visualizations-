@@ -20,7 +20,7 @@ his ride history.
 
 #import sample csv files 
 frank_rides=pd.read_csv("final_df.csv")
-ride_history=pd.read_csv("magnes_data4.csv")
+ride_history=pd.read_csv("ride_history.csv")
 
 class Bike_Visualizations():
     def __init__(self):
