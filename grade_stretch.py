@@ -1,6 +1,8 @@
 #how does rider's velocity compare on long uphill ride vs. short uphill? 
 #how does rider's velocity compare on long downhill vs. short downhill?
 
+df=pd.read_csv("final_df.csv") 
+
 class Stage_Stretch():
     def __init__(self):
         pass
