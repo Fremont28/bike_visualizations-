@@ -109,7 +109,64 @@ class Ride_Analysis():
         hill1=pd.merge(hills1,rest1,on="index")
         hill1_avg=hill1[["power","velocity","cadence","heartrate"]].mean() 
         hill1_avg=np.array(hill1_avg)
-
+        #hill2
+        hills2=hills[1]
+        hills2=pd.DataFrame(hills2)
+        hills2.reset_index(level=0,inplace=True)
+        rest1=rest 
+        rest1.reset_index()
+        hill2=pd.merge(hills2,rest1,on="index")
+        hill2_avg=hill1[["power","velocity","cadence","heartrate"]].mean() 
+        hill2_avg=np.array(hill2_avg)
+        #hill3 
+        hills3=hills[2]
+        hills3=pd.DataFrame(hills3)
+        hills3.reset_index(level=0,inplace=True)
+        hill3=pd.merge(hills3,rest1,on="index")
+        hill3_avg=hill3[["power","velocity","cadence","heartrate"]].mean() 
+        hill3_avg=np.array(hill3_avg)
+        #hill4
+        hills4=hills[3]
+        hills4=pd.DataFrame(hills4)
+        hills4.reset_index(level=0,inplace=True)
+        hill4=pd.merge(hills4,rest1,on="index")
+        hill4_avg=hill4[["power","velocity","cadence","heartrate"]].mean() 
+        hill4_avg=np.array(hill4_avg)
+        #hill5 
+        hills5=hills[4]
+        hills5=pd.DataFrame(hills5)
+        hills5.reset_index(level=0,inplace=True)
+        hill5=pd.merge(hills5,rest1,on="index")
+        hill5_avg=hill5[["power","velocity","cadence","heartrate"]].mean() 
+        hill5_avg=np.array(hill5_avg)
+        #hill6 
+        hills6=hills[5]
+        hills6=pd.DataFrame(hills6)
+        hills6.reset_index(level=0,inplace=True)
+        hill6=pd.merge(hills6,rest1,on="index")
+        hill6_avg=hill6[["power","velocity","cadence","heartrate"]].mean() 
+        hill6_avg=np.array(hill6_avg)
+        #hill7 
+        hills7=hills[6]
+        hills7=pd.DataFrame(hills7)
+        hills7.reset_index(level=0,inplace=True)
+        hill7=pd.merge(hills7,rest1,on="index")
+        hill7_avg=hill7[["power","velocity","cadence","heartrate"]].mean() 
+        hill7_avg=np.array(hill7_avg)
+        #hill8
+        hills8=hills[7]
+        hills8=pd.DataFrame(hills8)
+        hills8.reset_index(level=0,inplace=True)
+        hill8=pd.merge(hills8,rest1,on="index")
+        hill8_avg=hill8[["power","velocity","cadence","heartrate"]].mean() 
+        hill8_avg=np.array(hill8_avg)
+        #hill9
+        hills9=hills[8]
+        hills9=pd.DataFrame(hills9)
+        hills9.reset_index(level=0,inplace=True)
+        hill9=pd.merge(hills9,rest1,on="index")
+        hill9_avg=hill9[["power","velocity","cadence","heartrate"]].mean() 
+        hill9_avg=np.array(hill9_avg)
         # hill 10
         hills10=hills[9]
         hills10=pd.DataFrame(hills10)
@@ -120,14 +177,20 @@ class Ride_Analysis():
         hill10_avg=hills10[["power","velocity","cadence","heartrate"]].mean() 
         hill10_avg=np.array(hill10_avg)
 
-        #
+        #print out power on uphills 
         print("The average power on the cyclist's first hill {0:.10f}".format(hill1_avg[0])+ " watts.")
+        print("The average power on the cyclist's second hill {0:.10f}".format(hill2_avg[0])+ " watts.")
+        print("The average power on the cyclist's third hill {0:.10f}".format(hill3_avg[0])+ " watts.")
+        print("The average power on the cyclist's fourth hill {0:.10f}".format(hill4_avg[0])+ " watts.")
+        print("The average power on the cyclist's fifth hill {0:.10f}".format(hill5_avg[0])+ " watts.")
+        print("The average power on the cyclist's sixth hill {0:.10f}".format(hill6_avg[0])+ " watts.")
+        print("The average power on the cyclist's seventh hill {0:.10f}".format(hill7_avg[0])+ " watts.")
+        print("The average power on the cyclist's eighth hill {0:.10f}".format(hill8_avg[0])+ " watts.")
+        print("The average power on the cyclist's ninth hill {0:.10f}".format(hill9_avg[0])+ " watts.")
         print("The average power on the cyclist's tenth hill {0:.10f}".format(hill10_avg[0])+ " watts.")
-
 
 if __name__ =='__main__':
     rides=Ride_Analysis()
     rest_uphill=rides.uphill_pct() #measures uphill vs. "rest" percentages 
     uphill_metrcs=rides.uphill_metrics() #power output on uphills 
-
 
